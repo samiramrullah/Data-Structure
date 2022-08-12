@@ -35,9 +35,9 @@ int MaximumProfit(vector<int> weight, vector<int> val, int W)
     for (int i = 0; i <= weight.size(); i++)  table[i][0] = 0;
     for (int j = 0; j <= W; j++) table[0][j] = 0;
 
-    for (int i = 0; i <= weight.size(); i++)
+    for (int i = 1; i <= weight.size(); i++)
     {
-        for (int j = 0; j <= W; j++)
+        for (int j = 1; j <= W; j++)
         {
             if (weight[i] <= W)
             {
