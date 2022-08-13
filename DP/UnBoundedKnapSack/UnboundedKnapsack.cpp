@@ -31,22 +31,25 @@ vector<int> CreateList(vector<int> v)
 }
 int MaximumProfit(vector<int> weight, vector<int> val, int W)
 {
-    int table[weight.size() + 1][W + 1];
-    for (int i = 0; i <= weight.size(); i++)  table[i][0] = 0;
-    for (int j = 0; j <= W; j++) table[0][j] = 0;
-
-    for (int i = 1; i <= weight.size(); i++)
-    {
-        for (int j = 1; j <= W; j++)
+    int table[weight.size()+1][W+1];
+        for(int i=0;i<=weight.size();i++) table[i][0]=0;
+        for(int j=0;j<=W;j++) table[0][j]=0;
+        
+        for(int i=1;i<=weight.size();i++)
         {
-            if (weight[i] <= W)
+            for(int j=1;j<=W;j++)
             {
-                table[i][j] = max(val[i - 1] + table[i][j - weight[i - 1]], table[i - 1][j]);
+                if(weight[i-1]<=j)
+                {
+                    table[i][j]=max(val[i-1]+table[i][j-weight[i-1]],table[i-1][j]);
+                }
+                else
+                {
+                    table[i][j]=table[i-1][j];
+                }
             }
-            table[i][j] = table[i - 1][j];
         }
-    }
-    return table[weight.size()][W];
+        return table[weight.size()][W];
 }
 int main()
 {
