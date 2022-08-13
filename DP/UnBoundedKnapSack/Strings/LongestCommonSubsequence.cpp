@@ -9,7 +9,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-int MaximumProfit(string s1,string s2)
+int LongestCommonSubstring(string s1,string s2)
 {
     int m=s1.length();
     int n=s2.length();
@@ -40,6 +40,6 @@ int main()
     cin>>s1;
     cout<<"Second String\n";
     cin>>s2;
-    cout<<MaximumProfit(s1,s2)<<endl;
+    cout<<LongestCommonSubstring(s1,s2)<<endl;
     return 0;
 }
