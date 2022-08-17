@@ -5,7 +5,7 @@
 // N = 6
 // arr[] = 7 10 4 3 20 15
 // K = 3
-// Output : 10
+// Output : 7
 // Explanation :
 // 3rd smallest element in the given 
 // array is 7.
@@ -27,35 +27,26 @@ vector<int> CreateList(vector<int>v)
     }
     return v;
 }
-void print(vector<int>v)
+int KthSmallestElement(vector<int>arr,int k)
 {
-    for(auto i: v)
+    priority_queue <int> maxh;
+    for(int i=0;i<arr.size();i++)
     {
-        cout<<i<<" ";
-    }
-    cout<<endl;
-}
-int KthGargestElement(vector<int>arr,int k)
-{
-    priority_queue <int, vector<int>, greater<int> > minh;
-    for(int i=0;i<=arr.size();i++)
-    {
-        minh.push(arr[i]);
-        if(minh.size()>k+1)
+        maxh.push(arr[i]);
+        if(maxh.size()>k)
         {
-            minh.pop();
+            maxh.pop();
         }
     }
-    return minh.top();
+    return maxh.top();
 }
 int main()
 {
     vector<int> arr;
     arr=CreateList(arr);
     cout<<"Enter k\n";
-    print(arr);
     int k;
     cin>>k;
-    cout<<KthGargestElement(arr,k)<<endl;
+    cout<<KthSmallestElement(arr,k)<<endl;
     return 0;
 }
