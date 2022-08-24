@@ -19,12 +19,20 @@ void printOpposite(int n)
     cout<<n<<" ";
     printOpposite(n-1);
 }
+void printBacktracking(int n)
+{
+    if(n<=0) return;
+    printBacktracking(n-1);
+    cout<<(n);
+}
 int main()
 {
     int n;
     cin>>n;
     // printNtimes(n);
     // printuptoN(n);
-    printOpposite(n);
+    // printOpposite(n);
+    //backtracking
+    printBacktracking(n);
     return 0;
 }
