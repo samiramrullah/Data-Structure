@@ -13,11 +13,18 @@ void printuptoN(int n,int i=0)
     cout<<i<<" ";
     printuptoN(n,(i+1));
 }
+void printOpposite(int n)
+{
+    if(n<0) return;
+    cout<<n<<" ";
+    printOpposite(n-1);
+}
 int main()
 {
     int n;
     cin>>n;
-    printNtimes(n);
-    printuptoN(n);
+    // printNtimes(n);
+    // printuptoN(n);
+    printOpposite(n);
     return 0;
 }
