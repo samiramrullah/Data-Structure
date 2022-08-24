@@ -48,6 +48,15 @@ void ReverseArray(int *arr, int n, int i = 0)
     swap(arr[i], arr[n - 1]);
     ReverseArray(arr, n - 1, (i + 1));
 }
+bool ispalindrome(string s, int n, int i = 0)
+{
+    if (i >= n / 2)
+        return true;
+    if (s[i] != s[n - i - 1])
+        return false;
+    else
+        return ispalindrome(s, n, i + 1);
+}
 int main()
 {
     int n;
@@ -59,12 +68,14 @@ int main()
     // printBacktracking(n);
     // cout << printSumuptoN(n);
     // cout<<factorial(n);
-    int arr[] = {1, 2, 3, 4, 5,90};
-    n=sizeof(arr)/sizeof(arr[0]);
-    ReverseArray(arr, n);
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    // int arr[] = {1, 2, 3, 4, 5, 90};
+    // n = sizeof(arr) / sizeof(arr[0]);
+    // ReverseArray(arr, n);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    string s="ala";
+    cout << ispalindrome(s, s.length());
     return 0;
 }
