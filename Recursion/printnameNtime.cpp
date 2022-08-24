@@ -46,12 +46,12 @@ void ReverseArray(int *arr, int n, int i = 0)
     if (i >= n)
         return;
     swap(arr[i], arr[n - 1]);
-    ReverseArray(arr, n - 1, (i+1));
+    ReverseArray(arr, n - 1, (i + 1));
 }
 int main()
 {
     int n;
-    cin >> n;
+    // cin >> n;
     // printNtimes(n);
     // printuptoN(n);
     // printOpposite(n);
@@ -59,9 +59,10 @@ int main()
     // printBacktracking(n);
     // cout << printSumuptoN(n);
     // cout<<factorial(n);
-    int arr[5] = {1, 2, 3, 4, 5};
-    ReverseArray(arr, 5);
-    for (int i = 0; i < 5; i++)
+    int arr[] = {1, 2, 3, 4, 5,90};
+    n=sizeof(arr)/sizeof(arr[0]);
+    ReverseArray(arr, n);
+    for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
