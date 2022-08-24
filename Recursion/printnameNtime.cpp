@@ -37,8 +37,16 @@ int printSumuptoN(int n)
 }
 int factorial(int n)
 {
-    if(n==0) return 1;
-    return n*factorial(n-1);
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);
+}
+void ReverseArray(int *arr, int n, int i = 0)
+{
+    if (i >= n)
+        return;
+    swap(arr[i], arr[n - 1]);
+    ReverseArray(arr, n - 1, (i+1));
 }
 int main()
 {
@@ -50,6 +58,12 @@ int main()
     // backtracking
     // printBacktracking(n);
     // cout << printSumuptoN(n);
-    cout<<factorial(n);
+    // cout<<factorial(n);
+    int arr[5] = {1, 2, 3, 4, 5};
+    ReverseArray(arr, 5);
+    for (int i = 0; i < 5; i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
