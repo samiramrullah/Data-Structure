@@ -4,23 +4,18 @@ using namespace std;
 
 void findDuplicate(int arr[],int n)
 {
-    vector<int> ans;
-    set<int>s;
-   
     for(int i=0;i<n;i++)
     {
-        int count=s.size();
-        s.insert(arr[i]);
-        if(s.size()==count)
+        arr[arr[n]%n]=arr[arr[n]%n]+n;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]/n>1)
         {
-            ans.push_back(arr[i]);
-            
+            cout<<i<<" ";
         }
     }
-    for(auto i:ans)
-    {
-        cout<<i<<" ";
-    }
+
 }
 
 int main()
@@ -34,6 +29,11 @@ int main()
     {
         cin>>arr[i];
     }
-    findDuplicate(arr,n);
+    vector<int>duplicates;
+   findDuplicate(arr,n);
+    // for(auto i:duplicates)
+    // {
+    //     cout<<i<<" ";
+    // }
     return 0;
 }
