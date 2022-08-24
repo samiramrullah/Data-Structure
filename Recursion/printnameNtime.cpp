@@ -25,6 +25,11 @@ void printBacktracking(int n)
     printBacktracking(n-1);
     cout<<(n);
 }
+int printSumuptoN(int n)
+{
+    if(n<=0) return 0;
+    return n+printSumuptoN(n-1);
+}
 int main()
 {
     int n;
@@ -33,6 +38,7 @@ int main()
     // printuptoN(n);
     // printOpposite(n);
     //backtracking
-    printBacktracking(n);
+    // printBacktracking(n);
+    cout<<printSumuptoN(n);
     return 0;
 }
