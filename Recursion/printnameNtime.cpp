@@ -57,10 +57,17 @@ bool ispalindrome(string s, int n, int i = 0)
     else
         return ispalindrome(s, n, i + 1);
 }
+vector<int> f;
+int fib(int n)
+{
+    if ((n == 1) || (n == 0))
+        return n;
+    return (fib(n-1)+fib(n-2));
+}
 int main()
 {
     int n;
-    // cin >> n;
+    cin >> n;
     // printNtimes(n);
     // printuptoN(n);
     // printOpposite(n);
@@ -75,7 +82,11 @@ int main()
     // {
     //     cout << arr[i] << " ";
     // }
-    string s="ala";
-    cout << ispalindrome(s, s.length());
+    // string s="ala";
+    // cout << ispalindrome(s, s.length());
+    for (int i = 0; i < n; i++)
+    {
+        cout << fib(i) << " ";
+    }
     return 0;
 }

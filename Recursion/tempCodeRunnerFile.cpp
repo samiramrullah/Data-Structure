@@ -1,1 +1,1 @@
-printBacktracking(n);
+fib(n - 1) + (n - 2)
