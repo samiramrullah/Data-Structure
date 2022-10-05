@@ -94,6 +94,29 @@ void pattern4(int n)
         
     }
 }
+
+
+// pattern 5:
+// * 
+// * * 
+// * * *
+// * * * *
+// * * * * *
+void pattern5(int n)
+{
+    int i=1;
+    while(i<=n)
+    {
+        int j=1;
+        while(j<=i)
+        {
+            cout<<"* ";
+            j++;
+        }
+        cout<<"\n";
+        i++;
+    }
+}
 int main()
 {
     int n;
@@ -101,7 +124,8 @@ int main()
     // pattern1(n);
     // pattern2(n);
     // pattern3(n);
-    pattern4(n);
+    // pattern4(n);
+    pattern5(n);
 
     return 0;
 }
