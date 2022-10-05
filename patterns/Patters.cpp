@@ -146,17 +146,24 @@ void pattern6(int n)
 
 void pattern7(int n)
 {
-    int i = n;
-    int k = 1;
-    while (i >= 1)
+    int i = 1;
+    while (i <= n)
     {
-        for (int s = 1; s <= k; s++)
+        // for (int s = 1; s <= k; s++)
+        // {
+        //     cout << s << " ";
+        // }
+        // cout<<"\n";
+        // k++;
+        // i--;
+        int j = 1;
+        while (j <= i)
         {
-            cout << s << " ";
+            cout << (i - j + 1)<<" ";
+            j++;
         }
-        cout<<"\n";
-        k++;
-        i--;
+        cout << "\n";
+        i++;
     }
 }
 
