@@ -159,14 +159,33 @@ void pattern7(int n)
         int j = 1;
         while (j <= i)
         {
-            cout << (i - j + 1)<<" ";
+            cout << (i - j + 1) << " ";
             j++;
         }
         cout << "\n";
         i++;
     }
 }
+// pattern8
+// A A A
+// B B B
+// C C C
 
+void pattern8(int n)
+{
+    int i = 1;
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= 3)
+        {
+            cout << char('A' + i - 1) << " ";
+            j++;
+        }
+        cout << "\n";
+        i++;
+    }
+}
 int main()
 {
     int n;
@@ -177,7 +196,8 @@ int main()
     // pattern4(n);
     // pattern5(n);
     // pattern6(n);
-    pattern7(n);
+    // pattern7(n);
+    pattern8(n);
 
     return 0;
 }
