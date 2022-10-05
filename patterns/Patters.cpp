@@ -50,12 +50,35 @@ void pattern2(int n)
     }
 }
 
+
+// pattern 3:
+// 3 2 1
+// 3 2 1
+// 3 2 1
+
+void pattern3(int n)
+{
+    int i=1;
+    while(i<=n)
+    {
+        int j=n;
+        while(j>=1)
+        {
+            cout<<j<<" ";
+            j--;
+        }
+        cout<<'\n';
+        i++;
+    }
+}
+
 int main()
 {
     int n;
     cin >> n;
     // pattern1(n);
-    pattern2(n);
+    // pattern2(n);
+    pattern3(n);
 
     return 0;
 }
