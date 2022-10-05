@@ -26,30 +26,28 @@ void pattern1(int n)
     }
 }
 
-
 // pattern 2:
 // 1 2 3 4
 // 1 2 3 4
 // 1 2 3 4
 // 1 2 3 4
-// n*n times 
+// n*n times
 
 void pattern2(int n)
 {
-    int i=1;
-    while(i<=n)
+    int i = 1;
+    while (i <= n)
     {
-        int j=1;
-        while(j<=n)
+        int j = 1;
+        while (j <= n)
         {
-            cout<<j<<" ";
+            cout << j << " ";
             j++;
         }
-        cout<<'\n';
+        cout << '\n';
         i++;
     }
 }
-
 
 // pattern 3:
 // 3 2 1
@@ -58,62 +56,61 @@ void pattern2(int n)
 
 void pattern3(int n)
 {
-    int i=1;
-    while(i<=n)
+    int i = 1;
+    while (i <= n)
     {
-        int j=n;
-        while(j>=1)
+        int j = n;
+        while (j >= 1)
         {
-            cout<<j<<" ";
+            cout << j << " ";
             j--;
         }
-        cout<<'\n';
+        cout << '\n';
         i++;
     }
 }
 
 // pattern4:
-// 1 2 3 
+// 1 2 3
 // 4 5 6
 // 7 8 9
 
 void pattern4(int n)
 {
-    int i=1;
-    while(i<=n)
+    int i = 1;
+    while (i <= n)
     {
-        int count=0;
-        while (count<3)
+        int count = 0;
+        while (count < 3)
         {
-            if(i>n) return;
-            cout<<i<<" ";
+            if (i > n)
+                return;
+            cout << i << " ";
             i++;
             count++;
         }
-        cout<<'\n';
-        
+        cout << '\n';
     }
 }
 
-
 // pattern 5:
-// * 
-// * * 
+// *
+// * *
 // * * *
 // * * * *
 // * * * * *
 void pattern5(int n)
 {
-    int i=1;
-    while(i<=n)
+    int i = 1;
+    while (i <= n)
     {
-        int j=1;
-        while(j<=i)
+        int j = 1;
+        while (j <= i)
         {
-            cout<<"* ";
+            cout << "* ";
             j++;
         }
-        cout<<"\n";
+        cout << "\n";
         i++;
     }
 }
@@ -121,25 +118,48 @@ void pattern5(int n)
 // pattern6:
 // 1
 // 2 2
-// 3 3 3 
-// 4 4 4 4 
+// 3 3 3
+// 4 4 4 4
 
 void pattern6(int n)
 {
-    int i=1;
-    while(i<=n)
+    int i = 1;
+    while (i <= n)
     {
-        int j=i;
-        while(j>=1)
+        int j = i;
+        while (j >= 1)
         {
-            cout<<i<<" ";
+            cout << i << " ";
             j--;
         }
-        cout<<"\n";
+        cout << "\n";
         i++;
-
     }
 }
+
+// patern7:
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+
+void pattern7(int n)
+{
+    int i = n;
+    int k = 1;
+    while (i >= 1)
+    {
+        for (int s = 1; s <= k; s++)
+        {
+            cout << s << " ";
+        }
+        cout<<"\n";
+        k++;
+        i--;
+    }
+}
+
 int main()
 {
     int n;
@@ -149,7 +169,8 @@ int main()
     // pattern3(n);
     // pattern4(n);
     // pattern5(n);
-    pattern6(n);
+    // pattern6(n);
+    pattern7(n);
 
     return 0;
 }
