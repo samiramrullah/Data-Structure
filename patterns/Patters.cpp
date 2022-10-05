@@ -72,13 +72,36 @@ void pattern3(int n)
     }
 }
 
+// pattern4:
+// 1 2 3 
+// 4 5 6
+// 7 8 9
+
+void pattern4(int n)
+{
+    int i=1;
+    while(i<=n)
+    {
+        int count=0;
+        while (count<3)
+        {
+            if(i>n) return;
+            cout<<i<<" ";
+            i++;
+            count++;
+        }
+        cout<<'\n';
+        
+    }
+}
 int main()
 {
     int n;
     cin >> n;
     // pattern1(n);
     // pattern2(n);
-    pattern3(n);
+    // pattern3(n);
+    pattern4(n);
 
     return 0;
 }
